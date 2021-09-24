@@ -1,0 +1,28 @@
+  332  mkdir CUSTOMERS
+  333  mkdir PRODUCTS
+  334  grep "50122160" amazon_reviews_us_Books_v1_02.tsv | cut -f 9 | tail -n +2 | sort -n > CUSTOMERS/50122160.txt
+  335  grep "50732546" amazon_reviews_us_Books_v1_02.tsv | cut -f 9 | tail -n +2 | sort -n > CUSTOMERS/50732546.txt
+  336  grep "52615377" amazon_reviews_us_Books_v1_02.tsv | cut -f 9 | tail -n +2 | sort -n > CUSTOMERS/52615377.txt
+  337  grep "043935806X" amazon_reviews_us_Books_v1_02.tsv | cut -f 9 | tail -n +2 | sort -n > PRODUCTS/043935806X.txt
+  338  grep "0439139597" amazon_reviews_us_Books_v1_02.tsv | cut -f 9 | tail -n +2 | sort -n > PRODUCTS/0439139597.txt
+  339  grep "0525947647" amazon_reviews_us_Books_v1_02.tsv | cut -f 9 | tail -n +2 | sort -n > PRODUCTS/0525947647.txt
+  340  head -n 1 PRODUCTS/0525947647.txt
+  341  nano PRODUCTS/0525947647.txt 
+  342  > ws4stats.py
+  343  mv ws4stats.py worksheet4
+  344  cd worksheet4
+  345  ls
+  346  nano ws4stats.py
+  347  cd
+  348  python3 worksheet4/ws4stats.py CUSTOMERS/50122160
+  349  nano worksheet4/ws4stats.py
+  350  python3 worksheet4/ws4stats.py CUSTOMERS/50122160
+  351  python3 worksheet4/ws4stats.py CUSTOMERS/50122160.txt
+  352  nano worksheet4/ws4stats.py
+  353  python3 worksheet4/ws4stats.py CUSTOMERS/50122160.txt
+  354  python3 worksheet4/ws4stats.py CUSTOMERS/50732546.txt
+  355  python3 worksheet4/ws4stats.py CUSTOMERS/52615377.txt
+  356  python3 worksheet4/ws4stats.py PRODUCTS/043935806X.txt 
+  357  python3 worksheet4/ws4stats.py PRODUCTS/0439139597.txt 
+  358  python3 worksheet4/ws4stats.py PRODUCTS/0525947647.txt 
+  359  history > worksheet4/cmds.log
